@@ -1,25 +1,32 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Input from './Input'
+import { connect } from 'react-redux'
 
-const guesses = ['s']
+
 
 export class Guesses extends PureComponent {
-  props
+
   static propTypes = {
-    letters: guesses,
-    wrong: PropTypes.number.isRequired
+    guesses: PropTypes.array.isRequired,
   }
 
   render() {
 
+
+
+
     return (
       <div className="Guesses">
-        <p letters={this.props.letters}>Your Guesses: {this.props.letters}</p>
+        <p>Your Guesses: {this.props.guesses}</p>
         <Input />
       </div>
     )
   }
 }
 
-export default Guesses
+
+
+const mapStateToProps = ({ guesses }) => ({ guesses })
+
+export default connect(mapStateToProps)(Guesses)
