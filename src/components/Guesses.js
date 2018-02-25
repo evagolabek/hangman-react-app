@@ -13,18 +13,15 @@ export class Guesses extends PureComponent {
 
   render() {
 
-
-
-
     return (
       <div className="Guesses">
-        <p>Your Guesses: {this.props.guesses}</p>
+        <p>Your Guesses: </p>
+        <p>{this.props.guesses.join(" ")}</p>
         <Input />
       </div>
     )
   }
 }
-
 
 
 const mapStateToProps = ({ guesses }) => ({ guesses })

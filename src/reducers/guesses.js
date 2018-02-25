@@ -15,7 +15,6 @@ export default (state = [], { type, payload } = {}) => {
   switch (type) {
     case 'GUESSED_LETTER':
       return state.concat(payload.guesses)
-
     default :
       return state
   }

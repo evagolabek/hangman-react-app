@@ -2,10 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 export class CreateGame extends PureComponent {
-  static propTypes = {
-    createGame: PropTypes.func.isRequired
-  }
-
+  
   render() {
     return (
       <button
