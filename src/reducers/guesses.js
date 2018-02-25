@@ -8,20 +8,14 @@
 //     - type : the action type
 //     - payload : [optional] payload
 //
-export default function(state = [], action = {}) {
-  // based on the action type we will return a new state
-  switch(action.type) {
-    // some actions include a payload that we can use to update the state
-    // in this case the payload will contain a new recipe
-    case 'GUESS_LETTER' :
-      
-      return [].concat(action.payload)
-      // ONE ACTION CAN BE SENT TO TWO REDUCERS:
 
-    // optionally some other cases
-    // ...
+import { guessedLetter } from '../actions/guessedLetter';
 
-    // by default we return the existing state
+export default (state = [], { type, payload } = {}) => {
+  switch (type) {
+    case 'GUESSED_LETTER':
+      return state.concat(payload.guesses)
+
     default :
       return state
   }
