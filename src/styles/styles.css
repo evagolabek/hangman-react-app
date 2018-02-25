@@ -6,6 +6,7 @@
   font-size: 30px;
   letter-spacing: 4px;
   margin-bottom: 100px;
+  
 }
 
 .title {
@@ -16,6 +17,7 @@
 .Input {
   display
   margin-top: 100px;
+
 }
 
 .Guesses {
@@ -24,6 +26,13 @@
 
 .CreateGame {
   margin-top: 30px;
+  border: solid 2px black;
+  padding: 10px;
+}
+
+.CreateGame:hover {
+  background-color: grey;
+  color: white;
 }
 
 .result {
@@ -33,4 +42,23 @@
 
 p {
   margin-top: 20px;
+}
+
+#text-input {
+  border: 2px solid black;
+  height: 15px;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.button {
+  border: 2px solid black;
+  height: 37px;
+}
+
+.button:hover {
+  background-color: grey;
+  color: white;
+
 }

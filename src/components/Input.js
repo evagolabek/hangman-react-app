@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { guessedLetter } from '../actions/guessedLetter'
+import '../styles/styles.css';
 
 
 
@@ -22,8 +23,8 @@ export class Input extends PureComponent {
   render(){
      return (
       <form onSubmit={this.handleSubmit}>
-        <input placeholder="Please type letter:" type="text"/>
-        <button>Guess</button>
+        <input placeholder="Please type letter:" type="text" id="text-input"/>
+        <button className="button">Guess</button>
       </form>
     )
   }
