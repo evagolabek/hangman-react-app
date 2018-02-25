@@ -17,16 +17,30 @@ class App extends Component {
   render() {
 
     const word = "javascript"
-
     const guesses = this.props.guesses
+
+    function wrongGuessCount(word, guesses) {
+      return guesses
+        .filter(guess => word.indexOf(guess) === -1 )
+        .length;
+    }
 
     function showGuess(word, guesses) {
       return word
         .split('')
         .map(letter => guesses.indexOf(letter) < 0 ? "_" : letter)
-        .join(' ')
+        .join('')
     }
 
+    function isWinner(word, guesses) {
+      return word.split('').join('') === showGuess(word, guesses)
+      ;
+      // Will return true if word and the guess matches.
+      // Will return false if not.
+    }
+
+    console.log(isWinner(word, guesses) )
+    console.log(wrongGuessCount(word, guesses));
 
     return (
       <div className="App">
