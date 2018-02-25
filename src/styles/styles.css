@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+
+.Word {
+  font-size: 30px;
+  letter-spacing: 4px;
+  margin-bottom: 100px;
+}
+
+.title {
+    margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.Input {
+  display
+  margin-top: 100px;
+}
+
+.Guesses {
+  margin-bottom: 80px;
+}
+
+.CreateGame {
+  margin-top: 30px;
+}
+
+.result {
+  font-weight: bold;
+
+}
+
+p {
+  margin-top: 20px;
+}

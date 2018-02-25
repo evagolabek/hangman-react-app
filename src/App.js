@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './styles/App.css';
+import './styles/styles.css';
 import CreateGame from './components/CreateGame'
 import Word from './components/Word'
 import Guesses from './components/Guesses'
@@ -44,31 +44,31 @@ class App extends Component {
       // Will return false if not.
     }
 
-    function next(word, guesses) {
-        // check if lost
-        if (wrongGuessCount(word, guesses) > 6) {
-          return console.log(`LOSER! The word was: ${word}`)
+    function displayResult (word, guesses) {
+      if (wrongGuessCount(word, guesses) > 6) {
+        return `Loser, the word was ${word}
+                Refresh the page for a new game - Button is broke.`
+      }
+      if (isWinner(word, guesses)) {
+        //rl.close();       // Exits rl program (input/output mode) before returning.
+        return "Winner - Refresh the page for a new game - Button is broke."
+
+
         }
-        // check if won
-        if (isWinner(word, guesses)) {
-          //rl.close();       // Exits rl program (input/output mode) before returning.
-          return console.log('You win. Would you like to play again? (y/n)')
+    }
 
-
-          }
-        }
-
-    next(word, guesses)
 
     console.log(isWinner(word, guesses) )
     console.log(wrongGuessCount(word, guesses));
 
     return (
       <div className="App">
-        <h1>Hangman Game</h1>
-        <CreateGame />
-        <Word word={showGuess(word, guesses)}/>
+        <h1 className="title">Hangman Game</h1>
+        <Word word={showGuess(word, guesses)} className="Word"/>
         <Guesses />
+        <p>Incorrect Guesses: {wrongGuessCount(word, guesses)}</p>
+        <p className="result">{displayResult (word, guesses)}</p>
+        <CreateGame className="CreateGame"/>
       </div>
     );
   }

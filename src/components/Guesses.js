@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Input from './Input'
 import { connect } from 'react-redux'
+import '../styles/styles.css';
 
 
 
@@ -14,10 +15,10 @@ export class Guesses extends PureComponent {
   render() {
 
     return (
-      <div className="Guesses">
+      <div>
         <p>Your Guesses: </p>
-        <p>{this.props.guesses.join(" ")}</p>
-        <Input />
+        <p className="Guesses">{this.props.guesses.join(" ")}</p>
+        <Input className="Input"/>
       </div>
     )
   }
