@@ -9,6 +9,7 @@ export class Input extends PureComponent {
     if(e) e.preventDefault();
     const [input] = e.target.children
     console.log('You guessed: ', input.value);
+    input.value = ""
   }
 
   render(){
