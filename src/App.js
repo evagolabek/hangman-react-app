@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import './styles/styles.css';
+
 import CreateGame from './components/CreateGame'
 import Word from './components/Word'
 import Guesses from './components/Guesses'
+
+//Game Logic:
+import { wrongGuessCount, showGuess, isWinner, displayResult } from './lib/game'
+
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
@@ -49,10 +54,6 @@ class App extends Component {
 
         }
     }
-
-
-    console.log(isWinner(word, guesses) )
-    console.log(wrongGuessCount(word, guesses));
 
     return (
       <div className="App">
