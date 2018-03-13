@@ -19,8 +19,7 @@ export class CreateGame extends PureComponent {
   render() {
     return (
       <button
-        onClick={this.handleClick()}
-
+        onClick={this.handleClick}
         className="CreateGame"
       >
         New Game

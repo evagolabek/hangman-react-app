@@ -10,11 +10,14 @@
 //
 
 import { guessedLetter } from '../actions/guessedLetter';
+import { CREATE_GAME } from '../actions/types'
 
 export default (state = [], { type, payload } = {}) => {
   switch (type) {
     case 'GUESSED_LETTER':
       return state.concat(payload.guesses)
+    case CREATE_GAME:
+      return []
     default :
       return state
   }
