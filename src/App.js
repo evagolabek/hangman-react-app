@@ -51,7 +51,7 @@ class App extends Component {
       }
       if (isWinner(word, guesses)) {
         //rl.close();       // Exits rl program (input/output mode) before returning.
-        return "Winner - Refresh the page for a new game - Button is broke."
+        return "Winner -  Refresh the page for a new game - Button is broke."
 
 
         }

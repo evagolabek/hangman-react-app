@@ -11,8 +11,7 @@ export class CreateGame extends PureComponent {
 
 
   handleClick = () => {
-
-    console.log('Clicked');
+    this.props.createGame()
   }
 
 
@@ -30,4 +29,4 @@ export class CreateGame extends PureComponent {
   }
 }
 
-export default CreateGame
+export default connect(null, { createGame } )(CreateGame)
