@@ -5,7 +5,7 @@ import Word from './components/Word'
 import Guesses from './components/Guesses'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
+/*
 function random(words) {
   return words[Math.floor(Math.random() * words.length)]
 }
@@ -13,7 +13,7 @@ function random(words) {
 const words = ['javascript', 'sausage', 'juggling', 'frustration', 'satisfaction']
 const word = random(words)
 
-
+*/
 
 class App extends Component {
   static propTypes = {
@@ -23,6 +23,7 @@ class App extends Component {
   render() {
 
     const guesses = this.props.guesses
+    const word = this.props.word
 
     function wrongGuessCount(word, guesses) {
       return guesses
@@ -74,6 +75,11 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({ guesses }) => ({ guesses })
+const mapStateToProps = (state) => {
+  return {
+    guesses: state.guesses,
+    word: state.word
+  }
+}
 
 export default connect(mapStateToProps)(App)
