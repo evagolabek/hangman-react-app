@@ -1,8 +1,7 @@
+import { CREATE_GAME } from './types'
+
 export const createGame = function() {
   return {
-    type: 'CREATE_GAME',
-    payload: {
-      newGame: 1
-    }
+    type: CREATE_GAME
   }
 }
