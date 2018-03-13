@@ -5,15 +5,7 @@ import Word from './components/Word'
 import Guesses from './components/Guesses'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-/*
-function random(words) {
-  return words[Math.floor(Math.random() * words.length)]
-}
 
-const words = ['javascript', 'sausage', 'juggling', 'frustration', 'satisfaction']
-const word = random(words)
-
-*/
 
 class App extends Component {
   static propTypes = {
