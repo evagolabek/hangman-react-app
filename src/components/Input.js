@@ -20,7 +20,7 @@ export class Input extends PureComponent {
   render(){
      return (
       <form onSubmit={this.handleSubmit}>
-        <input placeholder="Please type letter:" type="text" id="text-input"/>
+        <input placeholder="Make a guess!" type="text" id="text-input"/>
       </form>
     )
   }

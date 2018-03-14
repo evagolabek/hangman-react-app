@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { wrongGuessCount, isWinner, isLoser } from '../lib/game'
+import { wrongGuessCount, isWinner } from '../lib/game'
 import { imageList } from '../images/imageList'
 
 
