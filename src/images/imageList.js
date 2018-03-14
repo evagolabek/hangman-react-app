@@ -13,5 +13,8 @@ export const imageList = [
   hangman3,
   hangman4,
   hangman5,
+  hangman6,
+  hangman6,
+  hangman6,
   hangman6
 ]

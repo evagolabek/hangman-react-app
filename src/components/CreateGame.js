@@ -14,7 +14,9 @@ export class CreateGame extends PureComponent {
     this.props.createGame()
   }
 
-
+  componentWillMount() {
+    this.props.createGame()
+  }
 
   render() {
     return (
