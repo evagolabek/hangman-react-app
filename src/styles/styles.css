@@ -1,9 +1,18 @@
+.header {
+  background-color: lightgrey;
+  margin-top: -30px;
+  padding-top: 25px;
+  padding-bottom: 7px;
+
+}
+
 .title {
   display: block;
   margin: 30px auto 30px auto;
   max-width: 270px;
   color: #ce0213
 }
+
 
 .App {
   text-align: center;

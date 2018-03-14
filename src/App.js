@@ -12,11 +12,13 @@ class App extends Component {
 
     return (
       <div className="App">
-        <img
-          className="title"
-          alt="hangman"
-          src="https://occ-0-1428-2433.1.nflxso.net/art/87e01/5694568c69ef4be79164f46b967e7f4c1a387e01.png"
-         />
+        <div className="header">
+          <img
+            className="title"
+            alt="hangman"
+            src="https://occ-0-1428-2433.1.nflxso.net/art/87e01/5694568c69ef4be79164f46b967e7f4c1a387e01.png"
+           />
+         </div>
         <GameStatus />
         <Word className="Word"/>
         <Guesses />

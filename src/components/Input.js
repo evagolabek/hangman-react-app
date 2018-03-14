@@ -12,7 +12,6 @@ export class Input extends PureComponent {
   handleSubmit = (e) => {
     if(e) e.preventDefault();
     const [input] = e.target.children
-    console.log('You guessed: ', input.value);
     this.props.guessedLetter(input.value)
     input.value = ""
   }
