@@ -8,8 +8,6 @@ export class CreateGame extends PureComponent {
     createGame: PropTypes.func.isRequired
   }
 
-
-
   handleClick = () => {
     this.props.createGame()
   }

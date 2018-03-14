@@ -17,16 +17,22 @@ export class GameStatus extends PureComponent {
     return (
       <div className="GameStatus">
 
-        <img src={imageList[wrongGuessCount(word, guesses)]} alt="hangman-stages" className="hangman-image"/>
+        <img
+          src={imageList[wrongGuessCount(word, guesses)]}
+          alt="hangman-stages"
+          className="hangman-image"
+        />
 
         { isWinner(word, guesses) ? (
-          <p>Winner!</p>
+          <p><b>Winner!</b></p>
         ) : (
           <p></p>
         )}
 
         { isLoser(word, guesses) ? (
-          <p>Loser! The word was {word}</p>
+          <p>
+            <b>Loser!</b> The word was <b> {word}</b>
+          </p>
         ) : (
           <p></p>
         )}

@@ -1,7 +1,14 @@
+// Hangan Game Logic:
+
 export function wrongGuessCount(word, guesses) {
+
   return guesses
+    .reduce(function(a,b){
+      if (a.indexOf(b) < 0 ) a.push(b);
+      return a;
+    },[])
     .filter(guess => word.indexOf(guess) === -1 )
-    .slice(0,7)
+    .slice(0,6)
     .length;
 }
 
@@ -22,10 +29,39 @@ export function isLoser(word, guesses)  {
   }
 }
 
-// WORD GENERATOR:
-
+// ---------------------------------------------------------------------
+// Random Word Generator:
 export function random(words) {
   return words[Math.floor(Math.random() * words.length)]
 }
 
-export const words = ['javascript', 'sausage', 'juggling', 'frustration', 'satisfaction']
+// Word List
+export const words = [
+  'javascript',
+  'sausage',
+  'juggling',
+  'frustration',
+  'satisfaction',
+  'announced',
+  'proclaimed',
+  'charity',
+  'fruit',
+  'fancy',
+  'incredible',
+  'swan',
+  'beer',
+  'programming',
+  'childlike',
+  'property',
+  'state',
+  'component',
+  'render',
+  'lifecycle',
+  'probability',
+  'party',
+  'sacrifice',
+  'dedication',
+  'maybe',
+  'ruby',
+  'typescript'
+]

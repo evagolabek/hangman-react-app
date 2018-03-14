@@ -1,7 +1,7 @@
 .title {
   display: block;
   margin: 30px auto 30px auto;
-  max-width: 300px;
+  max-width: 270px;
 }
 
 .App {
@@ -11,14 +11,13 @@
 .Word {
   font-size: 30px;
   letter-spacing: 4px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
 }
 
 .Input {
   display
   margin-top: 100px;
-
 }
 
 .CreateGame {
