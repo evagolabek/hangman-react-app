@@ -1,6 +1,7 @@
 export function wrongGuessCount(word, guesses) {
   return guesses
     .filter(guess => word.indexOf(guess) === -1 )
+    .slice(0,6)
     .length;
 }
 
@@ -12,10 +13,7 @@ export function showGuess(word, guesses) {
 }
 
 export function isWinner(word, guesses) {
-  return word.split('').join('') === showGuess(word, guesses)
-  ;
-  // Will return true if word and the guess matches.
-  // Will return false if not.
+  return word.split('').join('') === showGuess(word, guesses);
 }
 
 export function displayResult (word, guesses) {
@@ -24,9 +22,6 @@ export function displayResult (word, guesses) {
             Refresh the page for a new game - Button is broke.`
   }
   if (isWinner(word, guesses)) {
-    //rl.close();       // Exits rl program (input/output mode) before returning.
     return "Winner -  Refresh the page for a new game - Button is broke."
-
-
     }
 }

@@ -24,7 +24,6 @@ export class Input extends PureComponent {
      return (
       <form onSubmit={this.handleSubmit}>
         <input placeholder="Please type letter:" type="text" id="text-input"/>
-        <button className="button">Guess</button>
       </form>
     )
   }

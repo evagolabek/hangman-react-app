@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import './styles/styles.css';
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
+import { imageList } from './images/imageList'
+import './styles/styles.css';
+//Components:
 import CreateGame from './components/CreateGame'
 import Word from './components/Word'
 import Guesses from './components/Guesses'
@@ -8,8 +12,7 @@ import Guesses from './components/Guesses'
 //Game Logic:
 import { wrongGuessCount, showGuess, isWinner, displayResult } from './lib/game'
 
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+
 
 
 class App extends Component {
@@ -22,45 +25,22 @@ class App extends Component {
     const guesses = this.props.guesses
     const word = this.props.word
 
-    function wrongGuessCount(word, guesses) {
-      return guesses
-        .filter(guess => word.indexOf(guess) === -1 )
-        .length;
-    }
-
-    function showGuess(word, guesses) {
-      return word
-        .split('')
-        .map(letter => guesses.indexOf(letter) < 0 ? "_" : letter)
-        .join('')
-    }
-
-    function isWinner(word, guesses) {
-      return word.split('').join('') === showGuess(word, guesses)
-      ;
-      // Will return true if word and the guess matches.
-      // Will return false if not.
-    }
-
-    function displayResult (word, guesses) {
-      if (wrongGuessCount(word, guesses) > 6) {
-        return `Loser, the word was ${word}
-                Refresh the page for a new game - Button is broke.`
-      }
-      if (isWinner(word, guesses)) {
-        //rl.close();       // Exits rl program (input/output mode) before returning.
-        return "Winner -  Refresh the page for a new game - Button is broke."
-
-
-        }
-    }
+    showGuess(word, guesses)
+    wrongGuessCount(word, guesses)
+    isWinner(word, guesses)
+    displayResult (word, guesses)
 
     return (
       <div className="App">
-        <h1 className="title">Hangman Game</h1>
-        <Word word={showGuess(word, guesses)} className="Word"/>
+
+        <img className="title" alt="hangman"
+          src="https://occ-0-1428-2433.1.nflxso.net/art/87e01/5694568c69ef4be79164f46b967e7f4c1a387e01.png"
+        />
+        <img src={imageList[wrongGuessCount(word, guesses)]} alt="hangman-stages" className="hangman-image"/>
+
+        <Word className="Word"/>
         <Guesses />
-        <p>Incorrect Guesses: {wrongGuessCount(word, guesses)}</p>
+        
         <p className="result">{displayResult (word, guesses)}</p>
         <CreateGame className="CreateGame"/>
       </div>
@@ -68,7 +48,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ) => {
   return {
     guesses: state.guesses,
     word: state.word

@@ -1,3 +1,9 @@
+.title {
+  display: block;
+  margin: 30px auto 30px auto;
+  max-width: 300px;
+}
+
 .App {
   text-align: center;
 }
@@ -5,13 +11,8 @@
 .Word {
   font-size: 30px;
   letter-spacing: 4px;
-  margin-bottom: 100px;
-  
-}
+  margin-bottom: 50px;
 
-.title {
-    margin-top: 70px;
-  margin-bottom: 100px;
 }
 
 .Input {
@@ -21,11 +22,11 @@
 }
 
 .Guesses {
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 
 .CreateGame {
-  margin-top: 30px;
+  margin-top: 10px;
   border: solid 2px black;
   padding: 10px;
 }
