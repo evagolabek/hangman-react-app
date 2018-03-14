@@ -31,3 +31,12 @@ export function displayResult (word, guesses) {
     return "Winner -  Refresh the page for a new game - Button is broke."
     }
 }
+
+
+// WORD GENERATOR:
+
+export function random(words) {
+  return words[Math.floor(Math.random() * words.length)]
+}
+
+export const words = ['javascript', 'sausage', 'juggling', 'frustration', 'satisfaction']

@@ -22,7 +22,7 @@
 }
 
 .CreateGame {
-  margin-top: 10px;
+  margin-top: 30px;
   border: solid 2px black;
   padding: 10px;
 }
@@ -47,6 +47,7 @@ p {
   padding: 10px;
   font-size: 16px;
   margin-right: 5px;
+  width: 130px;
 }
 
 .button {
