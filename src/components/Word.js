@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { showGuess } from '../lib/game'
+import { showGuess, isLoser } from '../lib/game'
 
 export class Word extends PureComponent {
 
@@ -15,7 +15,18 @@ export class Word extends PureComponent {
 
       return (
         <div className="Word">
-          <p>{showGuess(word, guesses)}</p>
+
+        {
+          isLoser(word, guesses) ? (
+          <p>
+            <b>Loser!</b> The word was
+            <p className="word-big lose"> {word}</p>
+          </p>
+          ) : (
+          <p className="word-big">{showGuess(word, guesses)}</p>
+          )
+        }
+
         </div>
       )
   }

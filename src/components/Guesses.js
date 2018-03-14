@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Input from './Input'
+import CreateGame from './CreateGame'
 import { connect } from 'react-redux'
 import '../styles/styles.css';
-import { wrongGuessCount } from '../lib/game'
+import { wrongGuessCount, isWinner, isLoser } from '../lib/game'
 
 
 
@@ -20,9 +21,10 @@ export class Guesses extends PureComponent {
 
     return (
       <div>
+        <Input className="Input"/>
         <p className="Guesses">Your Guesses: {guesses.join(" ")}</p>
         <p>Incorrect Guesses: {wrongGuessCount(word, guesses)}</p>
-        <Input className="Input"/>
+
       </div>
     )
   }

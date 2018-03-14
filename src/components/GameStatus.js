@@ -24,18 +24,11 @@ export class GameStatus extends PureComponent {
         />
 
         { isWinner(word, guesses) ? (
-          <p><b>Winner!</b></p>
+          <p><b>Winner!</b> the word was:</p>
         ) : (
           <p></p>
         )}
 
-        { isLoser(word, guesses) ? (
-          <p>
-            <b>Loser!</b> The word was <b> {word}</b>
-          </p>
-        ) : (
-          <p></p>
-        )}
 
       </div>
     )
