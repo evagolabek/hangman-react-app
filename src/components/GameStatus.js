@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { wrongGuessCount, isWinner, isLoser } from '../lib/game'
 import { imageList } from '../images/imageList'
+
+
 export class GameStatus extends PureComponent {
 
   static propTypes = {
@@ -34,11 +36,6 @@ export class GameStatus extends PureComponent {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    guesses: state.guesses,
-    word: state.word
-  }
-}
+const mapStateToProps = ({ guesses, word }) => ({ guesses, word })
 
 export default connect(mapStateToProps)(GameStatus)

@@ -4,9 +4,6 @@ import { connect } from 'react-redux'
 import { guessedLetter } from '../actions/guessedLetter'
 import '../styles/styles.css';
 
-
-
-
 export class Input extends PureComponent {
   static propTypes = {
     guessedLetter: PropTypes.func.isRequired

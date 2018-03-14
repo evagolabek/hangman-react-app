@@ -11,8 +11,7 @@ export class Word extends PureComponent {
   }
 
   render() {
-    const guesses = this.props.guesses
-    const word = this.props.word
+    const { guesses, word } = this.props
 
       return (
         <div className="Word">
@@ -22,12 +21,6 @@ export class Word extends PureComponent {
   }
 }
 
-
-const mapStateToProps = (state) => {
-  return {
-    guesses: state.guesses,
-    word: state.word
-  }
-}
+const mapStateToProps = ({ guesses, word }) => ({ guesses, word })
 
 export default connect(mapStateToProps)(Word)

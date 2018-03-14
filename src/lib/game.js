@@ -22,17 +22,6 @@ export function isLoser(word, guesses)  {
   }
 }
 
-export function displayResult (word, guesses) {
-  if (wrongGuessCount(word, guesses) > 6) {
-    return `Loser, the word was ${word}
-            Refresh the page for a new game - Button is broke.`
-  }
-  if (isWinner(word, guesses)) {
-    return "Winner -  Refresh the page for a new game - Button is broke."
-    }
-}
-
-
 // WORD GENERATOR:
 
 export function random(words) {
